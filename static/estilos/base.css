@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poppins&display=swap');
 
-/* styles.css */
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -14,20 +14,23 @@ body {
 }
 
 header {
-    min-height: 150px;
-    background-color: #ac2473;
+    max-width: 100%;
+    max-height: 150px;
+    background-color: #ec4fa8;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    margin-bottom: 0;
+    top: 0;
+    z-index: 1000;
 }
 
-img {
+.img-base {
     width: 150px;
     height: auto;
-    justify-content: left;
+    margin-left: -110px;
 }
 
 nav ul {
@@ -35,6 +38,7 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
+    margin-left: 50px;
 }
 
 nav ul li {
@@ -42,16 +46,20 @@ nav ul li {
     text-align: center;
 }
 
+main {
+    flex: 1;
+    margin-top: 150px; 
+}
+
 nav ul li a {
     font-family: 'Poetsen One', sans-serif;
     text-decoration: none;
     color: white;
-    font-weight: bold;
     font-size: 20px;
 }
 
 nav ul li a:hover {
-    color: #ff6600; 
+    color: #f18841; 
     text-decoration: underline;
     transition: 0.5s;
 }
@@ -60,9 +68,8 @@ footer {
     text-align: center;
     padding: 10px;
     background-color: #f1f1f1;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    max-width: 100%;
+    position: relative;
 }
 
 footer a {

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'donuts',
     'paginas',
+    'centos',
 ]
 
 MIDDLEWARE = [

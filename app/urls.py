@@ -10,4 +10,7 @@ urlpatterns = [
 
     # URLs Home
     path('', include('paginas.urls')),
+
+    # URLs Cento
+    path('', include('centos.urls')),
 ]

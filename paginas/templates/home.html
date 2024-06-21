@@ -1,11 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'estilos/home.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<main>
+    <div class="container">
+        <div class="text-container">
+            <h1 id="h-delicia">Mini Delícias</h1>
+            <p>Cake Donuts irresistíveis, macios e cobertos com delícias que encantam gerações.</p>
+        </div>
+        <div class="sub-container">
+            <img src="{% static 'images/donuts2.png' %}" alt="Donuts2">
+        </div>
+    </div>
+</main>
+{% endblock %}

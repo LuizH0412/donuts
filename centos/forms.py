@@ -1,11 +1,14 @@
 from django import forms
-from donuts.models import Donut
+from centos.models import Cento
 
-class DonutModelForm(forms.ModelForm):
+
+
+class CentoModelForm(forms.ModelForm):
     class Meta:
-        model = Donut
+        model = Cento
         fields = '__all__'
     
+
     def clean_valor(self):
         valor = self.cleaned_data.get('valor')
 

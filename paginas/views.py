@@ -24,3 +24,11 @@ class ContatoView(View):
             request,
             'contato.html'
         )
+
+
+class LocalView(View):
+    def get(self, request):
+        return render(
+            request,
+            'local.html'
+        )
