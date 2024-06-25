@@ -11,7 +11,6 @@ class Donut(models.Model):
         max_length=200,
         choices=CHOICE_TIPO
     )
-    sabor = models.CharField(max_length=200)
     ingredientes = models.TextField()
     foto = models.ImageField(upload_to='donuts/', blank=True, null=True)
 

@@ -18,16 +18,15 @@
 
         <li class="nav-item">
           <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
-            <h4><strong>Sabores</strong></h4>
+            <h4><strong>Donuts</strong></h4>
           </a>
         </li><!-- End tab nav item -->
-
+        
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
             <h4><strong>Centos</strong></h4>
-          </a><!-- End tab nav item -->
-
-        </li>
+          </a>
+        </li><!-- End tab nav item -->
 
       </ul>
 
@@ -37,50 +36,116 @@
 
           <div class="tab-header text-center">
             <p>Menu</p>
-            <h3>Sabores</h3>
+            <h3>Doces</h3>
           </div>
 
           <div class="row gy-5">
+            {% if list_donut %}
+              {% for donut in list_donut %}
+                {% if donut.tipo == 'D' %}
+                    <div class="col-lg-4 menu-item">
+                        <a href="{% url 'detail_donut' donut.pk %}">
+                          {% if donut.foto %}
+                            <img src="{{ donut.foto.url }}" class="menu-img img-fluid" alt="{{ donut.nome }} - {{ donut.tipo }}">
+                          {% endif %}
+                          <h4>{{ donut.nome }}</h4>
+                        </a>
+                    </div><!-- Menu Item -->
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              <p style="text-align: center;">Nenhum produto encontrado.</p>
+            {% endif %}
+          </div>
+          
+          <!-- Salgados -->
 
-            <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-              <h4>Aut Luia</h4>
-              <p class="ingredients">
-                Lorem, deren, trataro, filede, nerada
-              </p>
-              <p class="price">
-                $14.95
-              </p>
-            </div><!-- Menu Item -->
+          <div class="tab-header text-center">
+            <h3>Salgados</h3>
+          </div>
 
+          <div class="row gy-5">
+            {% if list_donut %}
+              {% for donut in list_donut %}
+                {% if donut.tipo == 'S' %}
+                  <div class="col-lg-4 menu-item">
+                    <a href="{% url 'detail_donut' donut.pk %}">
+                      {% if donut.foto %}
+                        <img src="{{ donut.foto.url }}" class="menu-img img-fluid" alt="{{ donut.nome }} - {{ donut.tipo }}">
+                      {% endif %}
+                      <h4>{{ donut.nome }}</h4>
+                    </a>
+                  </div><!-- Menu Item -->
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              <p style="text-align: center;">Nenhum produto encontrado.</p>
+            {% endif %}
           </div>
         </div><!-- End Starter Menu Content -->
+
 
         <div class="tab-pane fade" id="menu-breakfast">
 
           <div class="tab-header text-center">
             <p>Menu</p>
-            <h3>Centos</h3>
+            <h3>Doces</h3>
           </div>
 
           <div class="row gy-5">
+            {% if centos %}
+              {% for cento in centos %}
+                {% if cento.tipo == 'D' %}
+                  <div class="col-lg-4 menu-item">
+                    <a href="{% url 'detail_cento' cento.pk %}">
+                      {% if cento.foto %}
+                        <img src="{{ cento.foto.url }}" class="menu-img img-fluid" alt="{{ cento.nome }} - {{ cento.tipo }}">
+                      {% endif %}
+                      <h4>{{ cento.nome }}</h4>
+                      <p class="ingredients">
+                        {{ cento.quantidade }} Unidades
+                      </p>
+                      <p class="price">
+                        R${{ cento.valor|floatformat:2 }}
+                      </p>
+                    </a>
+                  </div><!-- Menu Item -->
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              <p style="text-align: center;">Nenhum produto encontrado.</p>
+            {% endif %}
+          </div>
 
-            <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-              <h4>Magnam Tiste</h4>
-              <p class="ingredients">
-                Lorem, deren, trataro, filede, nerada
-              </p>
-              <p class="price">
-                $5.95
-              </p>
-            </div><!-- Menu Item -->
+          <!-- Salgados -->
+
+          <div class="tab-header text-center">
+            <h3>Salgados</h3>
+          </div>
+
+          <div class="row gy-5">
+            {% if centos %}
+              {% for cento in centos %}
+                {% if cento.tipo == 'S' %}
+                  <div class="col-lg-4 menu-item">
+                    <a href="{% url 'detail_cento' cento.pk %}">
+                      {% if cento.foto %}
+                        <img src="{{ cento.foto.url }}" class="menu-img img-fluid" alt="{{ cento.nome }} - {{ cento.tipo }}">
+                      {% endif %}
+                      <h4>{{ cento.nome }}</h4>
+                      <p class="ingredients">
+                        {{ cento.quantidade }} Unidades
+                      </p>
+                      <p class="price">
+                        R${{ cento.valor|floatformat:2 }}
+                      </p>
+                    </a>
+                  </div><!-- Menu Item -->
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              <p style="text-align: center;">Nenhum produto encontrado.</p>
+            {% endif %}
           </div>
         </div><!-- End Breakfast Menu Content -->
-
-      </div>
-
-    </div>
-
-  </section><!-- /Menu Section -->
 {% endblock %}

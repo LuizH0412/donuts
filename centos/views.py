@@ -6,12 +6,13 @@ from centos.forms import CentoModelForm
 
 class CentoListView(ListView):
     model = Cento
-    template_name = 'list_cento.html'
-    context_object_name = 'list_cento'
+    template_name = 'list_donut.html'
+    context_object_name = 'centos'
+    
 
 
     def get_queryset(self):
-        cento = super().get_queryset().order_by('valor')
+        cento = super().get_queryset().order_by('nome')
         search = self.request.GET.get('search')
 
         if search:
