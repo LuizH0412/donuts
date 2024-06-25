@@ -590,13 +590,18 @@ section,
 .section-title p {
   color: var(--heading-color);
   margin: 10px 0 0 0;
-  font-size: 48px;
+  font-size: 30px;
   font-weight: 500;
   font-family: 'Poetsen One', sans-serif;
+  font-style: italic;
 }
 
 .section-title p .description-title {
-  color: var(--accent-color);
+  color: #F20C90;
+}
+
+.section-title p .description-title:hover {
+  color: #FF6E0C;
 }
 
 /*--------------------------------------------------------------
@@ -986,7 +991,7 @@ section,
   cursor: pointer;
   height: 100%;
   border: 0;
-  border-bottom: 2px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-bottom: 2px solid color-mix(in srgb, #F20C90, transparent 80%);
 }
 
 @media (max-width: 575px) {
@@ -1016,13 +1021,13 @@ section,
 
 .menu .nav-link:hover {
   color: var(--accent-color);
-  border-color: var(--accent-color);
+  border-color: #FF6E0C;
 }
 
 .menu .nav-link.active {
   background-color: var(--background-color);
   color: var(--accent-color);
-  border-color: var(--accent-color);
+  border-color: #F20C90;
 }
 
 .menu .tab-content .tab-header {

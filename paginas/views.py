@@ -10,14 +10,6 @@ class HomeView(View):
         )
 
 
-class InfoView(View):
-    def get(self, request):
-        return render(
-            request,
-            'quem_somos.html'
-        )
-
-
 class ContatoView(View):
     def get(self, request):
         return render(
