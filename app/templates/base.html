@@ -29,8 +29,7 @@
   <!-- Main CSS File -->
   <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
   {% block extra_css %}{% endblock %}
-
-
+  
 </head>
 
 <body class="index-page">
@@ -47,9 +46,8 @@
         <ul>
           <li><a href="{% url 'home' %}" class="active"><strong>Home</strong><br></a></li>
           <li><a href="{% url 'list_donut' %}"><strong>Cardápio</strong></a></li>
-          <li><a href="{% url 'contato' %}"><strong>Contato</strong></a></li>
           <li><a href="{% url 'local' %}"><strong>Local</strong></a></li>
-         
+          <li><a href="{% url 'contato' %}" class="btn-getstarted"><strong>Contato</strong></a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -121,7 +119,10 @@
   </footer>
 
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" style="background-color: #F20C90;"><i class="bi bi-arrow-up-short" style="background-color: #F20C90;"></i></a>
+
+ 
+ 
 
 
   <!-- Vendor JS Files -->

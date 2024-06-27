@@ -1,7 +1,21 @@
 from donuts.models import Donut
+from django.shortcuts import render
 from donuts.forms import DonutModelForm
 from django.views.generic import ListView, CreateView, DetailView, DeleteView, UpdateView
+from django.views import View
 from django.urls import reverse_lazy
+from centos.models import Cento
+
+
+class CombinedListView(View):
+    def get(self, request, *args, **kwargs):
+        donuts = Donut.objects.all()
+        centos = Cento.objects.all()
+        context = {
+            'donuts': donuts,
+            'centos': centos,
+        }
+        return render(request, 'list_donut.html', context)
 
 
 class DonutListView(ListView):

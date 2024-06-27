@@ -24,3 +24,5 @@ class LocalView(View):
             request,
             'local.html'
         )
+    
+

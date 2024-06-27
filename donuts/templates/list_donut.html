@@ -3,6 +3,33 @@
 
 {% block title %}Cardápio - Mini Delícias{% endblock %}
 
+{% block extra_css %}
+
+    <style>
+        .name-donut {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .name-donut:hover {
+            color: black;
+            transition: 0.5s;
+        }
+
+        .menu-item:hover {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.350);
+            transform: translateY(-10px);
+            transition: ease-in-out 0.3s;
+        }
+
+        .menu-item:not(:hover) {
+            transform: translateX(10px);
+            transition: ease-in-out 0.3s;
+        }
+    </style>
+
+{% endblock %}
+
 {% block content %}
 <section id="menu" class="menu section">
 
@@ -10,6 +37,7 @@
     <div class="container section-title" data-aos="fade-up">
       <h2>Cardápio</h2>
       <p><span>Confira nossos deliciosos</span> <span class="description-title">Cake Donuts</span></p>
+
     </div><!-- End Section Title -->
 
     <div class="container">
@@ -40,15 +68,15 @@
           </div>
 
           <div class="row gy-5">
-            {% if list_donut %}
-              {% for donut in list_donut %}
+            {% if donuts %}
+              {% for donut in donuts %}
                 {% if donut.tipo == 'D' %}
                     <div class="col-lg-4 menu-item">
                         <a href="{% url 'detail_donut' donut.pk %}">
                           {% if donut.foto %}
                             <img src="{{ donut.foto.url }}" class="menu-img img-fluid" alt="{{ donut.nome }} - {{ donut.tipo }}">
                           {% endif %}
-                          <h4>{{ donut.nome }}</h4>
+                          <h4 class="name-donut">{{ donut.nome }}</h4>
                         </a>
                     </div><!-- Menu Item -->
                 {% endif %}
@@ -65,15 +93,15 @@
           </div>
 
           <div class="row gy-5">
-            {% if list_donut %}
-              {% for donut in list_donut %}
+            {% if donuts %}
+              {% for donut in donuts %}
                 {% if donut.tipo == 'S' %}
                   <div class="col-lg-4 menu-item">
                     <a href="{% url 'detail_donut' donut.pk %}">
                       {% if donut.foto %}
                         <img src="{{ donut.foto.url }}" class="menu-img img-fluid" alt="{{ donut.nome }} - {{ donut.tipo }}">
                       {% endif %}
-                      <h4>{{ donut.nome }}</h4>
+                      <h4 class="name-donut">{{ donut.nome }}</h4>
                     </a>
                   </div><!-- Menu Item -->
                 {% endif %}
@@ -101,7 +129,7 @@
                       {% if cento.foto %}
                         <img src="{{ cento.foto.url }}" class="menu-img img-fluid" alt="{{ cento.nome }} - {{ cento.tipo }}">
                       {% endif %}
-                      <h4>{{ cento.nome }}</h4>
+                      <h4 class="name-donut">{{ cento.nome }}</h4>
                       <p class="ingredients">
                         {{ cento.quantidade }} Unidades
                       </p>
@@ -132,7 +160,7 @@
                       {% if cento.foto %}
                         <img src="{{ cento.foto.url }}" class="menu-img img-fluid" alt="{{ cento.nome }} - {{ cento.tipo }}">
                       {% endif %}
-                      <h4>{{ cento.nome }}</h4>
+                      <h4 class="name-donut">{{ cento.nome }}</h4>
                       <p class="ingredients">
                         {{ cento.quantidade }} Unidades
                       </p>
