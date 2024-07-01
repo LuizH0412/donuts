@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'donuts',
     'paginas',
     'centos',
+    'emails',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'minidelicias08@gmail.com'
+EMAIL_HOST_PASSWORD = 'mini.delicias08#'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

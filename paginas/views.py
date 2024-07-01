@@ -9,15 +9,6 @@ class HomeView(View):
             'home.html'
         )
 
-
-class ContatoView(View):
-    def get(self, request):
-        return render(
-            request,
-            'contato.html'
-        )
-
-
 class LocalView(View):
     def get(self, request):
         return render(

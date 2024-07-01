@@ -13,4 +13,7 @@ urlpatterns = [
 
     # URLs Cento
     path('', include('centos.urls')),
+
+    # URLs Email
+    path('', include('emails.urls'))
 ]
