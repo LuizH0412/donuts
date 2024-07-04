@@ -28,7 +28,13 @@
 
   <!-- Main CSS File -->
   <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
-  {% block extra_css %}{% endblock %}
+  {% block extra_css %}
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+  </style>
+  
+  {% endblock %}
   
 </head>
 

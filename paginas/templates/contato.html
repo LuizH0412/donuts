@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contato - Mini Delícias{% endblock %}
+
+{% block extra_css %}
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    .button {
+        display: inline-block;
+        padding: 10px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        background-color: #F20C90;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 20px; /* Espaço entre o mapa e o botão */
+        text-decoration: none; /* Remover sublinhado */
+    }
+    
+    .button:hover {
+        background-color: #ff7c24;
+        color: white;
+    }
+    
+    .button:active {
+        background-color: #004494;
+    }
+    
+    .button-container {
+        text-align: center; /* Centralizar o botão */
+        margin-top: 20px; /* Espaço entre o mapa e o botão */
+        margin-bottom: 20px;
+    }
+
+    .contact-person {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.801);
+        }
+    
+        .contact-person:hover {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.350);
+            transform: translateY(-10px);
+            transition: ease-in-out 0.3s;
+        }
+
+        .contact-person:not(:hover) {
+            transform: translateX(10px);
+            transition: ease-in-out 0.3s;
+        }
+
+    .name {
+        text-align: center;
+        color: #F20C90;
+        font-size: 35px;
+        font-family: 'Poetsen One', sans-serif;
+        text-decoration: underline;
+    }
+
+    .p-link {
+        font-family: 'Poetsen One', sans-serif;
+        font-size: 20px;
+    }
+
+    .link {
+        color: black;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+    }
+
+    .link:hover {
+        text-decoration: underline;
+    }
+    </style>
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+    <h2>Contato</h2>
+    <p><span>Entre em contato e faça seu</span> <span class="description-title">pedido</span></p>
+  </div><!-- End Section Title -->
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="contact-info">
+                
+                <div class="contact-numbers">
+                    <div class="contact-person">
+                        <h3 class="name">Poliana</h3><br>
+                        <p class="p-link">Whatsapp: <a href="https://wa.me/556592570407?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="link" title="Clique aqui!">+55 65 9257-0407</a></p><br>
+                        <p class="p-link">Instagram: <a href="https://www.instagram.com/poli_vitoria_/" target="_blank" class="link" title="Clique aqui!">@poli_vitoria_</a></p>
+                    </div>
+                    
+                    <div class="contact-person">
+                        <h3 class="name">Cassiane</h3><br>
+                        <p class="p-link">Whatsapp: <a href="https://wa.me/556592545635?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="link" title="Clique aqui!"> +55 65 9254-5635</a></p><br>
+                        <p class="p-link">Instagram: <a href="https://www.instagram.com/cassianecaldato/" target="_blank" class="link" title="Clique aqui!">@cassianecaldato</a></p>
+                    </div>
+                </div>
+                
+                <div class="button-container">
+                    <a href="https://wa.me/556592545635?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20pedido." class="button">Faça já seu pedido</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -4,7 +4,43 @@
 
 {% block title %}Local - Mini Delícias{% endblock %}
 
-{% block extra_css %}{% endblock %}
+{% block extra_css %}
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  .button {
+      display: inline-block;
+      padding: 10px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      background-color: #F20C90;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 20px; /* Espaço entre o mapa e o botão */
+      text-decoration: none; /* Remover sublinhado */
+  }
+  
+  .button:hover {
+      background-color: #ff7c24;
+      color: white;
+  }
+  
+  .button:active {
+      background-color: #004494;
+  }
+  
+  .button-container {
+      text-align: center; /* Centralizar o botão */
+      margin-top: 20px; /* Espaço entre o mapa e o botão */
+  }
+  </style>
+{% endblock %}
 
 {% block content %}
 
@@ -22,6 +58,10 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3843.4249438077204!2d-56.03100152879046!3d-15.568928584357112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939db07fe82fefed%3A0xebbff851d69889ef!2sR.%20Vila%20Bela%2C%20502-602%20-%20Dr.%20F%C3%A1bio%20Leite%2C%20Cuiab%C3%A1%20-%20MT%2C%2078052-010!5e0!3m2!1spt-BR!2sbr!4v1719446480143!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
       </div><!-- End Google Maps -->
+
+      <div class="button-container">
+        <a href="https://wa.me/556592570407?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20pedido." class="button" target="_blank" title="Clique aqui!">Faça seu pedido</a>
+      </div>
 
     </div>
 

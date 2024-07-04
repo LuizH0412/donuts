@@ -15,5 +15,13 @@ class LocalView(View):
             request,
             'local.html'
         )
+
+
+class ContatoView(View):
+    def get(self, request):
+        return render(
+            request,
+            'contato.html'
+        )
     
 
