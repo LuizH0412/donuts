@@ -9,9 +9,10 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+from decouple import config
 import os
 from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -136,7 +137,19 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Fotos
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# Email
+
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+    EMIAL_USE_TLS = config('EMAIL_USE_TLS')
+    EMAIL_PORT = config('EMAIL_PORT')
+    EMAIL_HOST = config('EMAIL_HOST')

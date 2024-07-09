@@ -23,5 +23,5 @@ class ContatoView(View):
             request,
             'contato.html'
         )
-    
+
 
