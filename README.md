@@ -1,6 +1,6 @@
-# Loja de Donuts
+# Mini Delícias
 
-Bem-vindo à loja de donuts! Este é o repositório para o site da nossa loja, onde você pode encontrar uma variedade deliciosa de donuts para todos os gostos.
+Bem-vindo à Mini Delícias! Este é o repositório para o site da nossa loja, onde você pode encontrar uma variedade deliciosa de donuts para todos os gostos.
 
 ## Descrição
 
