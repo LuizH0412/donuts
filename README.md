@@ -18,7 +18,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - **Python**: Linguagem de programação utilizada para a lógica de backend do projeto.
 - **Django**: Framework web em Python que estrutura e facilita o desenvolvimento da aplicação.
-- **Template**: Utilizado para renderizar páginas dinâmicas, integrando dados do backend com a interface do usuário.
+- **Bootstrap Made**: Utilizado para renderizar páginas dinâmicas, integrando dados do backend com a interface do usuário.
 - **PostgreSQL**: Banco de dados relacional utilizado para armazenar informações sobre os produtos, pedidos e usuários.
 - **SMTP**: Protocolo utilizado para envio de emails, como confirmações de pedido e notificações de contato.
 
