@@ -4,7 +4,7 @@ Bem-vindo à Mini Delícias! Este é o repositório para o site da nossa loja, o
 
 ## Descrição
 
-Nosso site permite que os usuários naveguem por nossa seleção de donuts, vejam detalhes de cada produto e encontrem informações sobre nossa loja física. O projeto foi desenvolvido com o objetivo de proporcionar uma experiência agradável para os amantes de donuts.
+Nosso site permite que os usuários naveguem por nossa seleção de donuts, vejam detalhes de cada produto e encontrem informações sobre nossa loja física. O projeto foi desenvolvido com o objetivo de proporcionar uma experiência agradável para os amantes de donuts.................
 
 ## Funcionalidades
 
