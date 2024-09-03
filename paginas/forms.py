@@ -15,12 +15,3 @@ class ContatoForm(forms.Form):
         'placeholder': 'Sua mensagem..'
     }))
 
-    def clean_numero(self):
-        telefone = self.cleaned_data['numero']
-        
-        telefone_regex = re.compile(r'^\(?\d{2}\)?\s?\d{4,5}-\d{4}$')
-
-        if not telefone_regex.match(telefone):
-            raise forms.ValidationError('Número de telefone inválido. Formato esperado: (XX) XXXX-XXXX ou (XX) XXXXX-XXXX')
-
-        return telefone
